@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://dty50b6ouu1rp"]
+
+[ext_resource type="Texture2D" uid="uid://bayohwroxtnu3" path="res://tiroPlayer.png" id="1_8pq1s"]
+[ext_resource type="Script" uid="uid://cmtno6qknplq8" path="res://tiro.gd" id="1_dbnqq"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dbnqq"]
+radius = 4.0
+
+[node name="TiroPlayer" type="Node2D"]
+
+[node name="Tiro" type="Area2D" parent="."]
+script = ExtResource("1_dbnqq")
+
+[node name="Sprite2D" type="Sprite2D" parent="Tiro"]
+texture = ExtResource("1_8pq1s")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tiro"]
+shape = SubResource("CircleShape2D_dbnqq")
+
+[node name="Timer" type="Timer" parent="Tiro"]
+wait_time = 2.0
+one_shot = true
