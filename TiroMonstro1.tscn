@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://cjm55rgnhgf55"]
+
+[ext_resource type="Texture2D" uid="uid://cbkiv4ea1aol0" path="res://tiroMonstro.png" id="1_enq47"]
+[ext_resource type="Script" uid="uid://cchu7pado56ir" path="res://tiro_monstro_1.gd" id="1_us1xh"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TiroMonstro1" type="Area2D" parent="."]
+script = ExtResource("1_us1xh")
+
+[node name="Sprite2D" type="Sprite2D" parent="TiroMonstro1"]
+texture = ExtResource("1_enq47")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TiroMonstro1"]

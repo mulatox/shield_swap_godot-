@@ -1,13 +1,38 @@
-[gd_scene load_steps=3 format=3 uid="uid://c4j8gs03oao8t"]
+[gd_scene load_steps=7 format=3 uid="uid://cwxjn06wkxe1n"]
 
-[ext_resource type="PackedScene" uid="uid://dkkcqglg0vnde" path="res://player.tscn" id="1_glv2v"]
+[ext_resource type="PackedScene" uid="uid://drfcwh4rdgkqa" path="res://player.tscn" id="1_glv2v"]
+[ext_resource type="Script" uid="uid://bs57mn15qesqr" path="res://main.gd" id="2_r0du0"]
 [ext_resource type="AudioStream" uid="uid://d3igbqsm4aap" path="res://Three Red Hearts - Pixel War 1.ogg" id="2_uu6xs"]
+[ext_resource type="PackedScene" uid="uid://bcg73xn5efk4o" path="res://EnemyType1.tscn" id="3_fos0i"]
+[ext_resource type="PackedScene" uid="uid://mjdcjj4mk17h" path="res://dialog_box.tscn" id="4_cm0pq"]
+[ext_resource type="PackedScene" uid="uid://v0cgbajqi8pv" path="res://Background.tscn" id="6_3dxm6"]
 
-[node name="Node2D" type="Node2D"]
+[node name="Main" type="Node2D"]
+script = ExtResource("2_r0du0")
 
-[node name="Node2D" parent="." instance=ExtResource("1_glv2v")]
+[node name="Player" parent="." instance=ExtResource("1_glv2v")]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_uu6xs")
 volume_db = -30.0
 autoplay = true
+
+[node name="inimigo1" parent="." instance=ExtResource("3_fos0i")]
+position = Vector2(318, 166)
+player_path = NodePath("../Player")
+
+[node name="DialogBox" parent="." instance=ExtResource("4_cm0pq")]
+
+[node name="inimigo2" parent="." instance=ExtResource("3_fos0i")]
+position = Vector2(472, 166)
+player_path = NodePath("../Player")
+
+[node name="inimigo3" parent="." instance=ExtResource("3_fos0i")]
+position = Vector2(-87, 217)
+player_path = NodePath("../Player")
+
+[node name="inimigo4" parent="." instance=ExtResource("3_fos0i")]
+position = Vector2(79, 233)
+player_path = NodePath("../Player")
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("6_3dxm6")]

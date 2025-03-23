@@ -1,0 +1,37 @@
+[gd_scene load_steps=3 format=3 uid="uid://mjdcjj4mk17h"]
+
+[ext_resource type="Script" uid="uid://dvmt1j50nu5mg" path="res://dialog_box.gd" id="1_1ki1k"]
+[ext_resource type="Texture2D" uid="uid://brrhbionl44hy" path="res://portrait.png" id="1_hwgul"]
+
+[node name="DialogBox" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_1ki1k")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 400.0
+offset_bottom = 60.0
+
+[node name="Portrait" type="TextureRect" parent="Panel"]
+layout_mode = 0
+offset_right = 73.0
+offset_bottom = 60.0
+texture = ExtResource("1_hwgul")
+expand_mode = 1
+
+[node name="DialogText" type="RichTextLabel" parent="Panel"]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 2.0
+offset_right = 395.0
+offset_bottom = 55.0
+text = "Texto de teste"
+
+[node name="Button" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 325.0
+offset_top = 27.0
+offset_right = 398.0
+offset_bottom = 58.0
+text = "Próximo"

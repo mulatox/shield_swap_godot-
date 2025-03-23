@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://enf5tlsk0tkv"]
+
+[ext_resource type="Texture2D" uid="uid://wr0h1p51bjgb" path="res://navinha.png" id="1_qnssb"]
+[ext_resource type="Script" uid="uid://bsa2h1ruramr8" path="res://dash_effect.gd" id="2_107lm"]
+
+[node name="DashEffect" type="Sprite2D"]
+modulate = Color(0.00392157, 0.00392157, 0.00392157, 0)
+texture = ExtResource("1_qnssb")
+script = ExtResource("2_107lm")
+
+[node name="DestroyTimer" type="Timer" parent="."]
+wait_time = 0.3
+one_shot = true
